@@ -4,13 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        /* ASSIGNMENT 1 AND 2
+        /* ASSIGNMENT 1 AND 2 SELF ENTRY
         Console.WriteLine("What is the magic number? ");
         string input = Console.ReadLine();
         int y = int.Parse(input);
         */
 
-        // ASSIGNMENT 3
+        // ASSIGNMENT 3 RANDOMIZER
         Random randomGenerator = new Random();
         int y = randomGenerator.Next(1,100);    
 
