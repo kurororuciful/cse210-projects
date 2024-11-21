@@ -26,7 +26,7 @@ class Program
 
             case 3:
             {
-                //DISPLAY ENTRIES 
+                //LOAD ENTRIES 
                 break;
             }
 

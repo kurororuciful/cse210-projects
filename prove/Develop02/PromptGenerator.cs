@@ -10,7 +10,7 @@ public class PromptGenerator
     };
 */
 
-    public string GetRandomPrompt()
+    public static string GetRandomPrompt()
     {
         return "";
     }
