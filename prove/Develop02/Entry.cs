@@ -22,7 +22,7 @@ public class Entry
     }
 
 
-    public EntryInfo()
+    public static string EntryInfo()
     {
         Console.WriteLine($"{_date} /n {_promptText} /n {_entryText}");
     }

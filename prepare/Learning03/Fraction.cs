@@ -24,14 +24,14 @@ public class Fraction
     public string FractionInfo()
     {
         Console.WriteLine($"{_top} / {_bottom} ");
-        string = Console.ReadLine();
+        string top = Console.ReadLine();
     }
 
 
     public double DecimalInfo()
     {
         Console.WriteLine($"{_top} / {_bottom} ")
-        double = Console.ReadLine();
+        double top = Console.ReadLine();
     }
 
 }
