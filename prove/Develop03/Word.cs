@@ -2,8 +2,8 @@ class Word
 {
 
     // PRIVATE ATTRIBUTES OR FIELDS
-    private string _text;
-    private bool _isHidden;
+    public string _text;
+    public bool _isHidden;
 
 
     // CONSTRUCTORS
@@ -27,7 +27,5 @@ class Word
         get { return _isHidden; }
         set { _isHidden = value; }
     }
-
-
 
 }

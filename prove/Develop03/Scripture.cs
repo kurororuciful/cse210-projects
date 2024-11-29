@@ -51,11 +51,11 @@ class Scripture
         {
             int randomIndex = random.Next(0, _word.Count); 
             _word[randomIndex].isHidden = true;
-        
-            string withHiddenText = string.Join(" ", _word.Select(w =>w.isHidden ? new string('_', w.Text.Length) : w.Text));
+        }
 
-            return withHiddenText;
-        }        
+        string withHiddenText = string.Join(" ", _word.Select(w => w.isHidden ? new string('_', w._text.Length) : w._text));
+        return withHiddenText;
+                
     }
 
 }
