@@ -35,20 +35,31 @@ class Reference
 
 
     // CONSTRUCTORS
-    public Reference(string _book, int _chapter, int _verse);
+    public Reference(string book, int chapter, int verse)
     {
-        book = _book;
-        chapter = _chapter;
-        verse = _verse;
-
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
     }
     
-    public Reference(string _book, int _chapter, int _verse, int _endVerse);
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
-        book = _book;
-        chapter = _chapter;
-        startVerse = _verse;
-        endVerse = _endVerse;
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
+    }
+
+    // DISPLAY
+    public string GetDisplayText()
+    {
+        if (_endVerse == 0)
+        {
+            return $"{_book} {_chapter} : {_verse} ";
+        }else 
+        {
+            return $"{_book} {_chapter} : {_verse} - {_endVerse}";
+        }
     }
 
 }

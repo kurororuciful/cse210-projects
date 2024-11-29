@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Scripture reference = new Scripture();
+        Reference myReference = new Reference("John", 3, 16);
+        string displayText = myReference.GetDisplayText();
+        Console.WriteLine(displayText);
 
         
     }

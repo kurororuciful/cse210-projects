@@ -36,9 +36,11 @@ class Program
 
 
         foreach (Fraction fraction in fraction)
+        {
             Fraction myFraction = new Fraction();
             {
                 myFraction.FractionInfo();
             }
+        }
     }
 }

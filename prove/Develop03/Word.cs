@@ -6,6 +6,14 @@ class Word
     private bool _isHidden;
 
 
+    // CONSTRUCTORS
+    public Word(string text)
+    {
+        _text = text;
+        _isHidden = false;
+    }
+
+
 
     // GETTERS AND SETTERS FOR WRAPPER PROPERTY
     public string text
@@ -19,4 +27,7 @@ class Word
         get { return _isHidden; }
         set { _isHidden = value; }
     }
+
+
+
 }
