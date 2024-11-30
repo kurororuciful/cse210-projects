@@ -13,7 +13,7 @@ class Scripture
         set { _reference = value; }
     }
 
-    public List<Word> word
+    public List<Word> Word
     {
         get { return _word; }
         set { _word = value; }
@@ -36,7 +36,7 @@ class Scripture
 
 
     // DISPLAY METHOD
-    public string DisplayText(Reference reference)
+    public string displayText(Reference reference)
     {
         return reference.GetDisplayText();
     }
@@ -58,4 +58,49 @@ class Scripture
                 
     }
 
+
+    public void ScriptureMemorySupport(Reference reference)
+    {
+
+        // TEXT WORD
+        string text = "For God so loved the world that he gave His only Begotten Son that whosoever believeth in Him should not perish but have everlasting life.";
+        
+        // REFERENCE IN THE SCRIPTURE OBJECT UPDATE
+        this.reference = reference.GetDisplayText();
+
+        // DISPLAY WORD
+        Console.WriteLine(this.reference);
+
+
+        // PROMPTING THE USER
+        while (true)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Press enter to continue or type 'quit' to finish ");
+            string prompt = Console.ReadLine();
+
+            
+            if (prompt.Equals("quit", StringComparison.OrdinalIgnoreCase))
+            {
+                // STOPPING THE LOOP BY QUIT
+                break;
+            }else{
+            
+                // HIDE RANDOM WORDS
+                string withHiddenText = HideRandomWords();
+            
+
+                if (_word.All(w => w.isHidden))
+                {
+                    break;
+                }
+
+                // CLEARING CONSOLE
+                Console.Clear();
+
+                // DISPLAYING THE VERSE WITH HIDDEN WORDS
+                Console.WriteLine(withHiddenText);
+            }
+        }
+    }
 }
