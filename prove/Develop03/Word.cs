@@ -2,8 +2,8 @@ class Word
 {
 
     // PRIVATE ATTRIBUTES OR FIELDS
-    public string _text;
-    public bool _isHidden;
+    private string _text;
+    private bool _isHidden;
 
 
     // CONSTRUCTORS

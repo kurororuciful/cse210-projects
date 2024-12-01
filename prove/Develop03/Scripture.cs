@@ -53,7 +53,7 @@ class Scripture
             _word[randomIndex].isHidden = true;
         }
 
-        string withHiddenText = string.Join(" ", _word.Select(w => w.isHidden ? new string('_', w._text.Length) : w._text));
+        string withHiddenText = string.Join(" ", _word.Select(w => w.isHidden ? new string('_', w.text.Length) : w.text));
         return withHiddenText;
                 
     }
@@ -99,6 +99,7 @@ class Scripture
                 Console.Clear();
 
                 // DISPLAYING THE VERSE WITH HIDDEN WORDS
+                Console.WriteLine(reference.GetDisplayText());
                 Console.WriteLine(withHiddenText);
             }
         }
