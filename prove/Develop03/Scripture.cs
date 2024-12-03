@@ -64,7 +64,8 @@ class Scripture
 
         // TEXT WORD
         string text = "For God so loved the world that he gave His only Begotten Son that whosoever believeth in Him should not perish but have everlasting life.";
-        
+        Console.WriteLine(text);
+
         // REFERENCE IN THE SCRIPTURE OBJECT UPDATE
         this.reference = reference.GetDisplayText();
 
