@@ -3,8 +3,8 @@ class Order
 
     // PRIVATE ATTRIBUTES OR FIELDS
     private string _oID;
-    private string _oCustomer;
-    private string _oShipAddress;
+    private Customer _oCustomer;
+    private Address _oShipAddress;
     private List<Product> _products;
 
 
@@ -12,16 +12,16 @@ class Order
     public string orderID
     {
         get { return _oID;}
-        set { _oID = value;}
+        set { _oID = generateOrderNumber();}
     }
 
-    public string customer
+    public Customer customer
     {
         get { return _oCustomer;}
         set { _oCustomer = value;}
     }
 
-    public string shippingAddress
+    public Address shippingAddress
     {
         get { return _oShipAddress;}
         set { _oShipAddress = value;}
@@ -35,9 +35,9 @@ class Order
 
 
     // CONSTRUCTOR FOR ORDERS
-    public Order(string orderID, string customer, string shippingAddress)
+    public Order(Customer customer, Address shippingAddress)
     {
-        _oID = orderID;
+        _oID = generateOrderNumber();
         _oCustomer = customer;
         _oShipAddress = shippingAddress;
         _products = new List<Product>();
@@ -45,9 +45,9 @@ class Order
 
 
     // METHOD FOR ORDER CALCULATION
-    public int CalculateOrder()
+    public double CalculateOrder()
     {
-        int orderValue = 0;
+        double orderValue = 0;
 
         foreach (Product product in _products)
         {
@@ -55,6 +55,15 @@ class Order
         }
         
         return orderValue;
+    }
+
+
+    // METHOD FOR AUTO GENERATING ORDER NUMBER
+    public string generateOrderNumber()
+    {
+        DateTime now = DateTime.Now;
+        string orderNumber = now.ToString("yyyyMMddHHmm");
+        return orderNumber;
     }
 
 }

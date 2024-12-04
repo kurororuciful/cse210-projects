@@ -12,7 +12,7 @@ class Customer
         set { _cName = value;}
     }
 
-    public string customerAddress
+    public string customerBillingAddress
     {
         get { return _cAddress;}
         set { _cAddress = value;}
@@ -20,10 +20,10 @@ class Customer
 
 
     // CONSTRUCTOR FOR CUSTOMER
-    public Customer(string customerName, string customerAddress)
+    public Customer(string customerName, string customerBillingAddress)
     {
         _cName = customerName;
-        _cAddress = customerAddress;
+        _cAddress = customerBillingAddress;
     }
 
 }

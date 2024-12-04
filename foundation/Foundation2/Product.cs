@@ -4,7 +4,7 @@ class Product
     // PRIVATE ATTRIBUTES OR FIELDS
     private string _pName;
     private string _pID;
-    private int _pPrice;
+    private double _pPrice;
     private int _pQty;
 
 
@@ -21,7 +21,7 @@ class Product
         set { _pID = value;}
     }
 
-    public int productPrice
+    public double productPrice
     {
         get { return _pPrice;}
         set { _pPrice = value;}
@@ -35,19 +35,19 @@ class Product
 
 
     // CONSTRUCTOR FOR INVENTORY LIST 
-    public Product (string productName, string productID, int productPrice, int productQuantity)
+    public Product (string productName, string productID, double productPrice, int productQuantity)
     {
         _pName = productName;
         _pID = productID;
         _pPrice = productPrice;
         _pQty = productQuantity;
-
     }
 
+
     // METHOD FOR PRODUCT ORDER
-    public int TotalValue()
+    public double TotalValue()
     {
-        int totalValue = productPrice * productQuantity;
+        double totalValue = productPrice * productQuantity;
         return totalValue;
     }
 
