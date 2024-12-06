@@ -5,7 +5,7 @@ class Order
     private string _oID;
     private Customer _oCustomer;
     private Address _oShipAddress;
-    private List<Product> _products;
+    private List<Product> _oProducts;
 
 
     // GETTERS AND SETTERS FOR WRAPPER PROPERTY
@@ -29,8 +29,8 @@ class Order
 
     public List<Product> productOrderList
     {
-        get { return _products;}
-        set { _products = value;}
+        get { return _oProducts;}
+        set { _oProducts = value;}
     }
 
 
@@ -40,7 +40,7 @@ class Order
         _oID = generateOrderNumber();
         _oCustomer = customer;
         _oShipAddress = shippingAddress;
-        _products = new List<Product>();
+        _oProducts = new List<Product>();
     }
 
 
@@ -49,7 +49,7 @@ class Order
     {
         double orderValue = 0;
 
-        foreach (Product product in _products)
+        foreach (Product product in _oProducts)
         {
             orderValue += product.TotalValue();            
         }
