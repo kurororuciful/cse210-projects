@@ -18,6 +18,6 @@ class WritingAssignment : Assignment
 
     public string GetWritingInformation()
     {
-        return $"Title: {title}\n";
+        return $"Title: {title}\nBy: {studentName}\n";
     }
 }
